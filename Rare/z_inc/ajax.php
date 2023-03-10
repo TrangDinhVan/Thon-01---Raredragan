@@ -7,11 +7,6 @@ function z_do_ajax() {
     $res = array('mes' => 'ajax-processed');
     $_action = $_POST['_action'];
 
-    if( $_action == 'initTestimonials' ):
-        $res = array(
-            'collection' => get_field( 'testimonials', 'option' )
-        );
-    endif;
 
     wp_send_json( $res );
     die();
