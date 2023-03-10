@@ -1,0 +1,231 @@
+@mixin transition($duration:0.5s, $ease:cubic-bezier(0.215, 0.61, 0.355, 1)){
+    -webkit-transition: all $duration $ease;
+    -moz-transition: all $duration $ease;
+    -o-transition: all $duration $ease;
+    transition: all $duration $ease;
+}
+
+.transition{
+    @include transition;
+}
+
+@mixin three { @media (min-width: 375px) {  @content;  } }
+@mixin four { @media (min-width: 411px) {  @content;  } }
+@mixin six { @media (min-width: 600px) {  @content;  } }
+@mixin sm { @media (min-width: 768px) {  @content;  } }
+@mixin md { @media (min-width: 992px) {  @content;  } }
+@mixin lg { @media (min-width: 1200px) {  @content;  } }
+@mixin xl { @media (min-width: 1340px) {  @content;  } }
+
+$primary: #2D446C;
+$success: #030303;
+$info: #17a2b8;
+$warning: #fa8b16;
+$danger: #7E0013;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": #555,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger
+);
+
+$spacers: (
+    0: 0,
+    1: 5px,
+    2: 10px,
+    3: 15px,
+    4: 20px,
+    5: 25px,
+    6: 30px,
+    7: 35px,
+    8: 40px,
+    9: 45px,
+    10: 50px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px, //Cũ: 1200
+  xl: 1340px
+);
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 1200px,
+  xl: 1200px
+);
+
+$grid-gutter-width: 30px;
+$border-color: #ddd;
+$zindex-sticky: 5;
+$btn-border-width: 1px;
+$btn-font-weight: 400;
+$btn-font-family: inherit;
+$btn-line-height: 1;
+$enable-shadows: false;
+$min-contrast-ratio: 2;
+$btn-font-size: 0.9rem;
+$btn-font-size-sm: 0.8rem;
+$btn-font-size-lg: 1rem;
+$btn-line-height: 1;
+$btn-border-radius: 2px;
+$link-hover-decoration: inherit;
+
+.text-blur{
+    color: #999;
+}
+
+.text-underline{
+    text-decoration: underline;
+}
+
+.font-regular{
+    font-weight: 400 !important;
+}
+
+.font-light{
+    font-weight: 300 !important;
+}
+
+.font-medium{
+    font-weight: 500 !important;
+}
+
+.font-semi-bold{
+    font-weight: 600 !important;
+}
+
+.font-bold{
+    font-weight: 700 !important;
+}
+
+.font-extra-bold{
+    font-weight: 900 !important;
+}
+
+.lh-10{
+    line-height: 1 !important;
+}
+
+.lh-13{
+    line-height: 1.3 !important;
+}
+
+.lh-16{
+    line-height: 1.6 !important;
+}
+
+.font-8x{
+    font-size: 0.8rem !important;
+}
+
+.font-9x{
+    font-size: 0.9rem !important;
+}
+
+.font-10x{
+    font-size: 1rem !important;
+}
+
+.font-11x{
+    font-size: 1.1rem !important;
+}
+
+.font-12x{
+    font-size: 1.2rem !important;
+}
+
+.font-13x{
+    font-size: 1.3rem !important;
+}
+
+.font-15x{
+    font-size: 1.5rem !important;
+}
+
+.font-18x{
+    font-size: 1.8rem !important;
+}
+
+.font-20x{
+    font-size: 2rem !important;
+}
+
+.bg-000{
+    background: #000;
+}
+
+hr{
+    outline: none;
+    display: block;
+    clear: both;
+    border: none;
+    height: 1px;
+    width: 100%;
+    background: #ddd;
+}
+
+.border-none{
+    border: none !important;
+}
+
+.r-0{
+    border-radius: 0 !important;
+}
+
+.r-25{
+    border-radius: 25px !important;
+}
+
+.text-vertical{
+    writing-mode: vertical-lr;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.text-strike{
+    text-decoration: line-through;
+}
+
+
+.text-000{
+    color: #000 !important;
+}
+
+.col-sm-15{
+    @include sm{
+        flex: 0 0 20% !important;
+        max-width: 20% !important;
+    }
+}
+
+.bg-eee{
+    background: #f7f7f7;
+}
+
+.flex-center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.font-italic{
+    font-style: italic;
+}
+
+.text-italic{
+    font-style: italic;
+}
+
+.text-justify{
+    text-align: justify;
+}

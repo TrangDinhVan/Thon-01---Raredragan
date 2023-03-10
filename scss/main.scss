@@ -1,0 +1,15 @@
+/* sass --watch main.scss ../Rare/style.css --style compressed --no-source-map */
+
+/*!
+ * Theme Name: Raredragan 1.0.1
+ * Author: Trangdv
+ * Version: 1.0
+ * Text Domain: zing
+ */
+
+@import "variable";
+@import "reset";
+@import "base";
+@import "bs";
+@import "header";
+@import "footer";

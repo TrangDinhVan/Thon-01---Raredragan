@@ -1,0 +1,5 @@
+.login h1 a{background-image:url('../images/logo-m.png');background-size:contain;width:280px;height:60px}
+
+body{
+    background: #aaa;
+}
