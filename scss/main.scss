@@ -13,3 +13,13 @@
 @import "bs";
 @import "header";
 @import "footer";
+
+#site-header{
+    @include transition;
+    &.elementor-sticky--effects{
+        @include lg{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
