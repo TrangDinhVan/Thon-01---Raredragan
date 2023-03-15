@@ -40,6 +40,6 @@ function zing_custom_post_type() {
             'slug' => 'rooms'
         )
     );
-    register_post_type( 'room', $args );
+    // register_post_type( 'room', $args );
 }
 add_action('init', 'zing_custom_post_type'); ?>
